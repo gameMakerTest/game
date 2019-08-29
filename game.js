@@ -537,11 +537,15 @@ p.nominalBounds = new cjs.Rectangle(-680.5,-687.5,1361,1375);
 			that.gotoAndStop(1);
 		});
 		
-		this.play_btn.addEventListener('touchstart', function(){
+		this.play_btn.addEventListener('mousedown', function(){
 			that.play_btn_under.gotoAndStop(1);
 		});
 		
-		this.play_btn.addEventListener('touchend', function(){
+		this.play_btn.addEventListener('mouseup', function(){
+			that.play_btn_under.gotoAndStop(0);
+		});
+		
+		this.play_btn.addEventListener('mouseout', function(){
 			that.play_btn_under.gotoAndStop(0);
 		});
 		/* //var brightPinkHex:uint = 0xFF32CC;
@@ -796,7 +800,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/game_atlas_.png?1567110221971", id:"game_atlas_"}
+		{src:"images/game_atlas_.png?1567111259292", id:"game_atlas_"}
 	],
 	preloads: []
 };
