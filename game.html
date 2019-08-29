@@ -17,7 +17,6 @@
 <script src="game.js?1567089082269"></script>
 <script src="https://vk.com/js/api/mobile_sdk.js"  type="text/javascript"></script>
 <script>
-	VK.init(function() { 
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
 	canvas = document.getElementById("canvas");
@@ -92,14 +91,18 @@ function handleComplete(evt,comp) {
 	makeResponsive(false,'both',false,1);	
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
-}}, function() { 
+}
+	
+	VK.init(function() { 
+		init();
+	}, function() { 
      // API initialization failed 
      // Can reload page here 
 }, '5.60'); 
 </script>
 <!-- write your code here -->
 </head>
-<body onload="init();" style="margin:0px;">
+<body style="margin:0px;">
 	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:480px; height:800px">
 		<canvas id="canvas" width="480" height="800" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:480px; height:800px; position: absolute; left: 0px; top: 0px; display: block;">
