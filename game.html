@@ -9,6 +9,14 @@
 -->
 <html>
 <head>
+<meta name="viewport" content="user-scalable=no">
+<style type="text/css"> 
+* { 
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+} 
+</style> 
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
 <title>game</title>
@@ -17,6 +25,8 @@
 <script src="game.js?1567089082269"></script>
 <script src="https://vk.com/js/api/mobile_sdk.js"  type="text/javascript"></script>
 <script>
+	document.ontouchmove = function(e){ e.preventDefault(); }
+
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
 	canvas = document.getElementById("canvas");
